@@ -1,0 +1,144 @@
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+body > * {
+    width:100%;
+}
+
+header {
+    flex: 0 0 auto;
+    height: 100px;
+    background-color:red;
+}
+
+.wrapper {
+    height: 100%;
+    /* flex: 1 1 auto; */
+    display: flex;
+    /* flex-grow: 1; */
+    flex-direction: column;
+    /* flex-shrink: 1;
+    flex-basis: auto; */
+}
+
+nav {
+    flex: 0 0 auto;
+
+    height: 80px;
+    background-color: orange;
+
+}
+
+section {
+    flex: 1 1 auto;
+    overflow-y: auto;
+
+    /* max-height: 300px; */
+    /* height: 80%; */
+    background-color: purple ;
+}
+    
+section img {
+    width: 100%;
+}
+.with-dog {
+    /* background-image: url(../images/dog-small.jpg); */
+    background-size: cover; /* scales, but crops */
+    background-size: contain; /* scales, no crop */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+aside {
+    flex: 0 0 auto;
+    height: 20%;
+    background-color: blue;
+
+}
+footer {
+    flex: 0 0 auto;
+    height: 50px;
+    background-color: green;
+}
+
+/* Media Queries go at the bottom
+    because of the cascade!
+    We want to add styles that are
+    further down the .css file.
+*/
+
+@media screen and (min-width: 600px) {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wrapper > *{
+        height: 100%;
+        /* width: 100%; */
+        
+    }
+    header {
+        background-color: yellow;
+    }
+
+    section {
+        background-color: black;
+        width: 65%;
+        
+    }
+
+    .with-dog {
+        /* background-image: url(../images/photographer-animal-photography-dog-58997.jpg); */
+    }
+
+    aside {
+        background-color: white;
+        width: 15%;
+    }
+
+    nav {
+        background-color: cornflowerblue;
+        width: 20%;
+    }
+    footer {
+        background-color: hotpink;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    section {
+        background-color: palegreen;
+    }
+    aside {
+        background-color:red;
+    }
+
+    nav {
+        background-color: black;
+    }
+    header {
+        background-color:blue;
+    }
+
+    footer {
+        background-color: gold;
+    }
+
+
+}
+
+
+
